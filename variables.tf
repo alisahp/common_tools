@@ -65,3 +65,15 @@ variable "project"  {
 variable "jenkins"  {
   type = "map"
 }
+
+variable "machine_type" {
+  default = "g1-small"
+}
+
+variable "zone" {
+  default = "us-central1-a"
+}
+
+variable "region" {
+  default = "us-central1"
+}
