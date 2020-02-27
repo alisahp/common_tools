@@ -191,7 +191,7 @@ infoblox:
 ## RFC 2136 configuration to be set via arguments/env. variables
 ##
 rfc2136:
-  host: "fuchicorp.com"
+  host: "murodbey.com"
   port: 53
   zone: "fuchicorp"
   tsigSecret: ""
