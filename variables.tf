@@ -36,7 +36,7 @@ variable "email" {
 }
 
 variable "google_project_id" {
-  default = "angular-unison-267720"
+  default = "commonteamfour"
 }
 
 variable "jenkins" {
@@ -45,8 +45,8 @@ variable "jenkins" {
   default = {
     admin_user             = "admin"
     admin_password         = "password"
-    jenkins_auth_client_id = "id"
-    jenkins_auth_secret    = "secret"
+    jenkins_auth_client_id = "c4a47e4cc6e2c0b5ef07"
+    jenkins_auth_secret    = "1c9bac1edf0ab85506cb828d338d8a3fef6a922b"
     git_token              = "awdiahwd12ehhaiodd"
   }
 }
