@@ -45,8 +45,8 @@ variable "jenkins" {
   default = {
     admin_user             = "admin"
     admin_password         = "password"
-    jenkins_auth_client_id = "id"
-    jenkins_auth_secret    = "secret"
+    jenkins_auth_client_id = "5cd41c2236404fa72a8e"
+    jenkins_auth_secret    = "23744147618db53ef79deb652b53e3a4f07c3c40"
     git_token              = "awdiahwd12ehhaiodd"
   }
 }
