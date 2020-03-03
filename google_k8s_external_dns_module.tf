@@ -1,4 +1,4 @@
-module "helm_deploy" {
+/*module "helm_deploy" {
   source = "fuchicorp/chart/helm"
 
   deployment_name        = "${var.deployment_name}" 
@@ -12,4 +12,4 @@ module "helm_deploy" {
     google_project_id      = "${var.google_project_id}"
 
   }
-}
+}*/
