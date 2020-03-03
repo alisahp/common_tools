@@ -9,7 +9,7 @@ module "helm_deploy" {
 
   template_custom_vars = {
     deployment_image = "nginx"    
-    google_project_id      = "${var.google_project_id}"
+    google_project      = "${var.google_project}"
 
   }
 }
