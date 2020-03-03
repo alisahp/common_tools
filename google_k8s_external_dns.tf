@@ -41,7 +41,7 @@ resource "kubernetes_secret" "external_dns_secret" {
   }
 
   data = {
-    "credentials.json" = "${file("${path.module}/common-service-account.json")}"
+    "credentials.json" = "${file("${path.module}/fuchicorp-service-account.json")}"
   }
 
   type = "generic"
