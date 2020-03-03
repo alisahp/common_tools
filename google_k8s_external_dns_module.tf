@@ -3,7 +3,7 @@ module "helm_deploy" {
 
   deployment_name        = "${var.deployment_name}" 
   deployment_environment = "${var.deployment_environment}" 
-  deployment_endpoint    = "externel-dns.${var.google_domain_name}"
+  deployment_endpoint    = "external-dns.${var.google_domain_name}"
   deployment_path        = "external-dns"
 
 
