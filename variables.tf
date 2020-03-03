@@ -67,4 +67,8 @@ variable "google_domain_name" {
   description = "Please change to your domain name"
 }
 
+variable "deployment_name" {
+  default = "external-dns"
+}
+
 
