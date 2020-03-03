@@ -3,7 +3,7 @@ module "helm_deploy" {
 
 
   deployment_name        = "artemis-deployment"
-  deployment_environment = "dev"
+  deployment_environment = "${var.deployment_environment}" 
   deployment_endpoint = "${var.google_domain_name}"
   deployment_path        = "artemis"
 
