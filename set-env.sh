@@ -3,7 +3,7 @@
 DIR=$(pwd)
 DATAFILE="$DIR/$1"
 #
-# FuchiCorp common script to set up Google terraform environment variables
+# Mybestsea common script to set up Google terraform environment variables
 # these all variables should be created on your config file before you run script.
 # <ENVIRONMENT> <BUCKET> <DEPLOYMENT> <PROJECT> <CREDENTIALS>
 
