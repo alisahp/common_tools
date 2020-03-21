@@ -1,0 +1,5 @@
+domain_name: ${deployment_endpoint}
+nexusport: ${nexusport}
+vaultport: ${vaultport}
+repo_port: ${repo_port}
+email: ${email}

@@ -6,3 +6,4 @@ common-service-account.json
 *backend.tf*
 *cache*
 set-env
+*fuchicorp-service-account.json*

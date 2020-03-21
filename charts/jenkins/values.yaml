@@ -132,11 +132,13 @@ Master:
       secretName: "jenkins-letsencrypt-prod"
   # List of plugins to be install during Jenkins master start
   InstallPlugins:
-    - kubernetes:1.18.2
+    - kubernetes:1.24.1
+    - git-parameter:0.9.12
+    - extended-choice-parameter:0.78
     - workflow-job:2.33
     - workflow-aggregator:2.6
     - credentials-binding:1.19
-    - git:3.11.0
+    - git:4.2.0
     - docker-build-step:2.4
     - oki-docki:1.1
     - slack:2.34

@@ -59,10 +59,17 @@ variable "grafana" {
     grafana_username = "admin"
     grafana_password = "password"
     grafana-name     = "grafana"
+    smtp_username    = "smtp-user"
+    smtp_password    = "password"
+    smtp_host        = "smtp.gmail.com:587"
   }
 }
 
 variable "google_domain_name" {
   default = "fuchicorp.com"
   description = "Please change to your domain name"
+}
+
+variable "deployment_name" {
+  default = "common_tools"
 }

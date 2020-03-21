@@ -429,7 +429,14 @@ grafana.ini:
   #   enabled: true
   #   allow_sign_up: true
   #   config_file: /etc/grafana/ldap.toml
-
+  smtp:
+    enabled: true
+    host: ${smtp_host}
+    user: ${smtp_user}
+    password: ${smtp_password}
+    skip_verify: true
+    from_name: Garafana
+    from_address: ${smtp_user}
 ## Grafana's LDAP configuration
 ## Templated by the template in _helpers.tpl
 ## NOTE: To enable the grafana.ini must be configured with auth.ldap.enabled
@@ -456,6 +463,7 @@ ldap:
 ## NOTE: To enable, grafana.ini must be configured with smtp.enabled
 ## ref: http://docs.grafana.org/installation/configuration/#smtp
 smtp:
+  enable: true
   # `existingSecret` is a reference to an existing secret containing the smtp configuration
   # for Grafana.
   existingSecret: ""
