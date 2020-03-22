@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "nexus.fullname" . }}
+  labels:
+{{ include "nexus.labels" . | indent 4 }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.portdocker }}
+      targetPort: {{ .Values.service.targetportdocker }}
+      protocol: TCP
+      name: docker
+    - port: {{ .Values.service.portnexus }}
+      targetPort: {{ .Values.service.targetportnexus }}
+      protocol: TCP
+      name: nexus
+  selector:
+    app.kubernetes.io/name: {{ include "nexus.name" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
