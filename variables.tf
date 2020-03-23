@@ -36,7 +36,7 @@ variable "email" {
 }
 
 variable "google_project_id" {
-  default = "mybestsea"
+  default = "mybestsea2"
 }
 
 variable "jenkins" {
