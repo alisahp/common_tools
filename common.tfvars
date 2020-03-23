@@ -1,7 +1,7 @@
 terraform {
   backend "gcs" {
-    bucket  = "mybestsea"
+    bucket  = "mybestsea2"
     prefix  = "tools/commontools"
-    project = "mybestsea"
+    project = "mybestsea2"
     }
  }
