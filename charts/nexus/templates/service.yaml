@@ -7,14 +7,14 @@ metadata:
 spec:
   type: {{ .Values.service.type }}
   ports:
-    - port: {{ .Values.service.portdocker }}
-      targetPort: {{ .Values.service.targetportdocker }}
-      protocol: TCP
-      name: docker
-    - port: {{ .Values.service.portnexus }}
-      targetPort: {{ .Values.service.targetportnexus }}
+    - port: {{ .Values.service.port }}
+      targetPort: 8081
       protocol: TCP
       name: nexus
+    - port: 8085
+      targetPort: 8085
+      protocol: TCP
+      name: repo 
   selector:
     app.kubernetes.io/name: {{ include "nexus.name" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}

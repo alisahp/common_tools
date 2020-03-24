@@ -10,10 +10,6 @@ data "template_file" "success_output" {
     # Grafana information
     grafana_username           = "${var.grafana["grafana_username"]}"
     grafana_password           = "${var.grafana["grafana_password"]}"
-    
-    # Nexus information
-    nexus_username           = "${var.nexus["nexus_username"]}"
-    nexus_password           = "${var.nexus["nexus_password"]}"
 
     # Vault information 
     vault_username             = "admin"

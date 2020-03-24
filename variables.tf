@@ -32,11 +32,11 @@ variable "repo_port" {
 }
 
 variable "email" {
-  default = "discovervisions@gmail.com"
+  default = "fuchicorpsolutions@gmail.com"
 }
 
 variable "google_project_id" {
-  default = "mybestsea2"
+  default = "angular-unison-267720"
 }
 
 variable "jenkins" {
@@ -66,7 +66,7 @@ variable "grafana" {
 }
 
 variable "google_domain_name" {
-  default = "alisait.net"
+  default = "fuchicorp.com"
   description = "Please change to your domain name"
 }
 

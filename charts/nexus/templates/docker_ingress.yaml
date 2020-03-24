@@ -1,0 +1,26 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/proxy-body-size: 2000m
+    nginx.org/client-max-body-size: 2000m
+  name: docker
+spec:
+  rules:
+  - host: {{ .Values.docker.docker_endpoint}}
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: {{ include "nexus.fullname" . }}
+          servicePort: {{ .Values.service.port }}
+      - path: /v2/
+        backend:
+          serviceName: {{ include "nexus.fullname" . }}
+          servicePort: {{ .Values.docker.repo_port }}
+  tls:
+  - hosts:
+    - {{ .Values.docker.docker_endpoint}}
+    secretName: tls-docker-cert-new

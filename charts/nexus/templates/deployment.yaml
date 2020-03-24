@@ -33,23 +33,15 @@ spec:
           - name: "INSTALL4J_ADD_VM_PARAMS"
             value: "-Xms1200M -Xmx1200M -XX:MaxDirectMemorySize=2G -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap"
           volumeMounts:
-          - name: nexus-pvc
+          - name: nexus
             mountPath: "/nexus-data"
           ports:
-            - name: docker
-              containerPort: {{ .Values.service.targetportdocker }}
-              protocol: TCP
             - name: nexus
-              containerPort: {{ .Values.service.targetportnexus }}
+              containerPort: 8081
               protocol: TCP
-          # livenessProbe:
-          #   httpGet:
-          #     path: /
-          #     port: http
-          # readinessProbe:
-          #   httpGet:
-          #     path: /
-          #     port: http
+            - name: repo
+              containerPort: 8085
+              protocol: TCP
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
@@ -65,6 +57,6 @@ spec:
         {{- toYaml . | nindent 8 }}
     {{- end }}
       volumes:
-      - name: "nexus-pvc"
+      - name: nexus
         persistentVolumeClaim:
           claimName: "nexus"
