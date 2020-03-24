@@ -23,6 +23,11 @@ Password: ${vault_password}
 URL:      https://vault.${deployment_endpoint}
 ##########################################################
 
+####################### Nexus ############################
+URL:      https://nexus.${deployment_endpoint}
+URL:      https://docker.${deployment_endpoint}
+##########################################################
+
 ####################### Prometheus ############################
 URL:      https://prometheus.${deployment_endpoint}
 ##########################################################
